@@ -43,4 +43,4 @@ public class hellowold {
 }
 }
 
-images/homework1.png
+![Alt homework11](./images/homework1.jpg)
