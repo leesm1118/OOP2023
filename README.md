@@ -97,6 +97,29 @@ public class Main {
 ![Alt homework11](./images/homework4.jpg)
 
 ### Homework5
+```java
+public class Main {
+    public static void main(String[] args) {
+        double pi = 0;
+        for (int i = 1; i <= 29; i += 2) {
+
+            if (i == 1) {
+                pi += 4.0 / i;
+                System.out.print("pi = 4/" + i);
+            } 
+            else if ((i / 2) % 2 == 1) {
+                pi -= 4.0 / i;
+                System.out.print(" - 4/" + i);
+            } 
+            else {
+                pi += 4.0 / i;
+                System.out.print(" + 4/" + i);
+            }
+        }
+    }
+}
+```
+![Alt homework11](./images/homework5.jpg)
 
 ### Homework6
 ```java
