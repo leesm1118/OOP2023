@@ -122,3 +122,34 @@ public class Binomial {
 }
 ```
 ![Alt homework11](./images/homework6.jpg)
+
+### Homework7
+```java
+public class SelectionSort {
+    public static void main(String[] args) {
+        int data[] = new int[20];
+        for (int i = 0; i < 20; i++) {
+            data[i] = (int)(Math.random() * 100);
+        }
+        for (int i = 0; i < 20; i++) {
+            System.out.print(data[i] + " ");
+        }
+        for (int i = 0; i < 19; i++) {
+            int min = i;
+            for (int j = i + 1; j < 20; j++) {
+                if (data[j] < data[min]) {
+                    min = j;
+                }
+            }
+            System.out.print("\n");
+            int temp = data[i];
+            data[i] = data[min];
+            data[min] = temp;
+        }
+        for (int i = 0; i < 20; i++) {
+            System.out.print(data[i] + " ");
+        }
+    }
+}
+```
+![Alt homework11](./images/homework7.jpg)
