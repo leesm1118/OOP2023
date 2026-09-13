@@ -97,6 +97,8 @@ public class Main {
 ![Alt homework11](./images/homework4.jpg)
 
 ### Homework5
+
+### Homework6
 ```java
 public class Binomial {
     public static void main(String[] args) {
@@ -119,4 +121,4 @@ public class Binomial {
     }
 }
 ```
-![Alt homework11](./images/homework5.jpg)
+![Alt homework11](./images/homework6.jpg)
