@@ -177,6 +177,30 @@ public class SelectionSort {
 ```
 ![Alt homework11](./images/homework7.jpg)
 
+### Homework8
+```java
+public class Main {
+    public static void main(String[] args) {
+        int score[][] = new int[30][5];
+        for (int i = 0; i < 30; i++) {
+            for (int j = 0; j < 4; j++) {
+                score[i][j] = (int)(Math.random() * 101);
+            }
+            score[i][4] = score[i][0] + score[i][1]
+                        + score[i][2] + score[i][3];
+        }
+        for (int i = 0; i < 30; i++) {
+            System.out.print((i + 1) + "\t");
+            for (int j = 0; j < 5; j++) {
+                System.out.print(score[i][j] + "\t");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+![Alt homework11](./images/homework8.jpg)
+
 ### Homework9
 ```
 1.625 = 1.11  
