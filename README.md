@@ -177,10 +177,8 @@ public class SelectionSort {
 ```
 ![Alt homework11](./images/homework7.jpg)
 
-###Homework8
-
 ###Homework9
-```
+```java
 1.625 = 1.11 / 
 1.562 = 1.101 / 
 1.875 = 0.111 / 
@@ -192,5 +190,8 @@ public class SelectionSort {
 ```
 
 ###Homework12
+```
 72  = 1001000 / 
 -72 = 0111000
+```
+
