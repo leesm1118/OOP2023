@@ -357,3 +357,82 @@ public class mean {
 -78 = 10110010
 ```
 
+### Homework13
+```java
+package miniCalculator;
+
+import java.util.Scanner;
+
+public class Calculator {
+	public static void main(String[] args) {
+		int i = 1;
+		int reverse = 3;
+		double result = 0;
+		Scanner sc = new Scanner(System.in);
+		String inputString = sc.nextLine();
+		String[] inputArray = inputString.split(" ");
+		
+		for (String a : inputArray) {
+			System.out.println(a);
+		}
+		
+		if (reverse < inputArray.length) {
+			i = ((inputArray[1].equals("+") || inputArray[1].equals("-")) && 
+			     (inputArray[3].equals("#") || inputArray[3].equals("/"))) ? 3 : 1;
+		}
+		
+		switch (inputArray[i]) {
+			case "+" -> result = F_plus(Double.parseDouble(inputArray[i - 1]), Double.parseDouble(inputArray[i + 1]));
+			case "-" -> result = F_minus(Double.parseDouble(inputArray[i - 1]), Double.parseDouble(inputArray[i + 1]));
+			case "#" -> result = F_multi(Double.parseDouble(inputArray[i - 1]), Double.parseDouble(inputArray[i + 1]));
+			case "/" -> result = F_divi(Double.parseDouble(inputArray[i - 1]), Double.parseDouble(inputArray[i + 1]));
+		}
+		
+		if (reverse < inputArray.length) {
+			if (i == 3) {
+				i = 1;
+				switch (inputArray[i]) {
+					case "+" -> result = F_plus(Double.parseDouble(inputArray[i - 1]), result);
+					case "-" -> result = F_minus(Double.parseDouble(inputArray[i - 1]), result);
+					case "#" -> result = F_multi(Double.parseDouble(inputArray[i - 1]), result);
+					case "/" -> result = F_divi(Double.parseDouble(inputArray[i - 1]), result);
+				}
+			} else {
+				i = 3;
+				switch (inputArray[i]) {
+					case "+" -> result = F_plus(result, Double.parseDouble(inputArray[i + 1]));
+					case "-" -> result = F_minus(result, Double.parseDouble(inputArray[i + 1]));
+					case "#" -> result = F_multi(result, Double.parseDouble(inputArray[i + 1]));
+					case "/" -> result = F_divi(result, Double.parseDouble(inputArray[i + 1]));
+				}
+			}
+		}
+		sc.close();
+	}
+
+	public static double F_plus(double a, double b) {
+		double out = a + b;
+		System.out.printf("%f\n", out);
+		return out;
+	}
+	
+	public static double F_minus(double a, double b) {
+		double out = a - b;
+		System.out.printf("%f\n", out);
+		return out;
+	}
+		
+	public static double F_multi(double a, double b) {
+		double out = a * b;
+		System.out.printf("%f\n", out);
+		return out;
+	}
+	
+	public static double F_divi(double a, double b) {
+		double out = a / b;
+		System.out.printf("%f\n", out);
+		return out;
+	}
+}
+```
+![Alt homework11](./images/homework13.jpg)
